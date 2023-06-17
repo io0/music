@@ -2,10 +2,16 @@
 <html>
   <head>
     <title>Music Gallery</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,500&family=IBM+Plex+Mono&family=Jost:ital,wght@0,300;0,400;1,300;1,400&family=Permanent+Marker&family=Public+Sans:wght@100;400&family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         height: 3500px; /* To create scrollable content */
         background-color: black;
+        font-family: IBM Plex Mono;
       }
       .container {
         padding: 80px 140px;
@@ -39,10 +45,29 @@
       .gallery img.active {
         border-color: red;
       }
+      .cover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        transition: 1s ease;
+      }
+      .cover p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="cover"><p>Click anywhere to enable sound</p></div>
       <div class="gallery">
         <video src="glasshouses.mp4"></video>
         <video src="amamizu.mp4" style="left: 180px; top: 30px"></video>

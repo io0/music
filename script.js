@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function highlightImage() {
     const scrollPosition = window.scrollY;
     // round
-    let index = Math.round(scrollPosition / 200) - 1;
+    let index = Math.round(scrollPosition / 200);
 
     for (var i = 0; i < videos.length; i++) {
       var video = videos[i];
@@ -31,4 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", highlightImage);
+
+  let cover = document.querySelector(".cover");
+  cover.addEventListener("click", function () {
+    cover.style.opacity = 0;
+    cover.style.pointerEvents = "none";
+    videos[0].play();
+  });
 });
