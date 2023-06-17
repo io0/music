@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Gallery</title>
+    <style>
+      body {
+        height: 3500px; /* To create scrollable content */
+        background-color: black;
+      }
+      .gallery {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .gallery img {
+        width: 200px;
+        border: 2px solid transparent;
+      }
+      .gallery video {
+        height: 150px;
+        border: 5px solid transparent;
+        position: absolute;
+        filter: brightness(0.8);
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+      }
+      .gallery video.active-video {
+        /* border-color: rgba(255, 255, 255, 0.3); */
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(1);
+        /* transition: transform 0.2s ease; */
+      }
+      .gallery img.active {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <video src="glasshouses.mp4"></video>
+      <video src="amamizu.mp4" style="left: 180px; top: 30px"></video>
+      <video src="true.mp4" style="left: 50px; top: 200px"></video>
+      <!-- <video src="honest.mp4" style="left: 300px; top: 100px"></video> -->
+      <!-- <video src="ato.mp4" style="left: 600px; top: 200px"></video> -->
+      <video src="is.mp4" style="left: 400px; top: 150px"></video>
+      <video src="kakusei.mp4" style="left: 700px"></video>
+      <video src="tremolo.mp4" style="left: 750px; top: 180px"></video>
+      <video
+        src="knock.mp4"
+        style="height: 160px; left: 950px; top: 100px"
+      ></video>
+
+      <video src="eye.mp4" style="left: 100px; top: 400px"></video>
+      <video src="shelter.mp4" style="left: 200px; top: 600px"></video>
+      <video src="past.mp4" style="left: 420px; top: 500px"></video>
+      <video
+        src="jukebox.mp4"
+        style="width: 300px; left: 800px; top: 400px"
+      ></video>
+      <!-- <video src="amadou.mp4" style="left: 500px; top: 500px"></video> -->
+      <video src="places.mp4" style="left: 700px; top: 600px"></video>
+      <!-- <img src="cat.jpg" alt="Image 1" />
+      <img src="echolocation.jpg" alt="Image 2" />
+      <img src="mitolight.jpg" alt="Image 3" /> -->
+      <!-- renegades, freedom, loser, oshakashama, oh hellos, -->
+      <!-- Add more images here -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
