@@ -1,6 +1,7 @@
 body {
   height: 3500px; /* To create scrollable content */
   background-color: black;
+  color: white;
   font-family: IBM Plex Mono, "Courier New", Courier, monospace;
 }
 .container {
@@ -36,7 +37,6 @@ body {
   border-color: red;
 }
 .cover {
-  color: white;
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   left: 0;
